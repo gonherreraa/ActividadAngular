@@ -1,0 +1,48 @@
+<div id="listado">
+
+    <div id="menuOpciones">
+        <ul id="menu" >
+            <button (click)="crearTareas()" class="btn">Crear tarea</button>
+            <button (click)="documentacion()" type="text" class="btn" >Documentación</button>
+        </ul>
+        
+    </div>
+
+    <div *ngIf="mostrarDoc" id="doc">
+        <h4>Estructura componentes:</h4>
+        <p>He creado dos componentes, uno que es el listado de tareas y otro que son las tareas. 
+            También hay una interfaz, que se implenta en el resto de componentes.
+        </p>
+        <h4>Estructura de código:</h4>
+        <p>En el listado esta la opción de crear las tareas y de ver la documentación. Cuando le da al botón de crear tarea, 
+            llama a la función de guardar tarea en el localStorage y a la función para crear la tarea. 
+            En cada tara se crea un botón de eliminar que llama a la función de eliminar tarea. 
+            Las tareas se almacen en un array de tareas en el componente mi-listado. Por cada tarea se hay dos botones para cambiar el estado de la tarea, 
+            si esta hecho la tarea se pondrá en verde, sino se pondrá en rojo. Por defecto, todas las tareas se crearán como no hechas.
+        </p>
+        <h4>Problemas y Mejoras</h4>
+        <p>Problemas encontrados han sido la conexión entre los componentes y el no poder agrupar las tareas por estado. 
+            Las mejoras serían agrupar por estado y poder filtrar por estado.
+        </p>
+
+    </div>
+
+
+    <div *ngIf="anadirTarea" id="crearTareas">
+        <input type="text" id="actividad" placeholder="Nombre de la tarea..." [(ngModel)]="actividad">
+        <input type="text" id="desarrollo" placeholder="Desarrollo ..." [(ngModel)]="desarrollo">
+        <input type="date" id="fecha" [(ngModel)]="fecha">
+        <input type="time" id="hora" [(ngModel)]="hora">
+
+        <button (click)="masTareas()" (click)="guardarEntrada()" class="btnTareas">Añadir tareas</button>
+    </div>
+
+    
+   
+    <div *ngFor="let tarea of listadoTareas" >
+        <app-tarea [tareaAtr]="tarea"></app-tarea>
+        <button (click)="menosTareas(tarea)" id="btnBorrar">Borrar</button>
+    </div>
+
+      
+</div>

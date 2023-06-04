@@ -1,0 +1,8 @@
+<div class="tarea" [ngStyle]="{'background-color':color}">
+    <h4>{{tareaAtr.nombre}}</h4>   
+    <p id="detalle">{{tareaAtr.detalle}}</p>
+    <p>Dia previsto para la realización de la tarea: {{tareaAtr.horario}}</p>
+    
+    <button [disabled]="tareaAtr.estado" (click)="actividadEstado()" class="btn">Hecho</button>
+    <button [disabled]="!tareaAtr.estado" (click)="actividadEstado()" class="btn">Sin hacer</button>
+</div>

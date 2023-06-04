@@ -1,0 +1,31 @@
+.tarea{
+    padding: 5px;
+    margin: 10px;
+    color: aliceblue;
+    background-color: steelblue;
+    border-radius: 5px;
+}
+
+#detalle{
+    background-color: aliceblue;
+    color: steelblue;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tarea p{
+    color: rgb(10, 10, 10);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+.btn:hover{
+    background-color: burlywood
+    ;
+}

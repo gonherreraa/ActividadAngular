@@ -1,0 +1,69 @@
+#listado{
+    background-color: lightblue;
+    height: 85vh;
+    margin: 0;
+
+}
+#listado h3{
+    padding: 10px;
+}
+
+input{
+    width: 500px;
+    padding: 5px;
+    margin: 10px;
+}
+
+#crearTareas{
+    display: grid;
+    margin:10px;
+    grid-template-areas: 'uno dos'
+                         'tres cuatro';
+
+}
+#actividad{
+    grid-area: uno;
+}
+#desarrollo{
+    grid-area: dos;
+}
+#fecha{
+    grid-area: tres;
+}
+#estado{
+    grid-area: cuatro;
+}
+.btn{
+    margin-left: 20px;
+    padding: 5px;
+    color: blue;
+    border-radius: 5px;
+}
+#btnBorrar{
+    margin: 5px;
+    padding: 3px;
+    border-radius: 5px;
+}
+#btnBorrar:hover{
+    background-color: red;
+}
+
+.btnTareas{
+
+    padding: 5px;
+    margin: 10px;
+    width: 15%;
+    color: blue;
+    border-radius: 5px;
+}
+#menuOpciones{
+    padding: 5px;
+    background-color: antiquewhite;
+}
+#menu{
+    margin: 10px;
+}
+
+#doc{
+    margin: 10px;
+}
